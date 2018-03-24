@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+underscore.so
+underscore.dylib
+underscore.dll
+underscore.a
+underscore.lib
+underscore-test-*
+*.exe
+*.o
+*.obj
+*.lst
