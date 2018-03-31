@@ -12,3 +12,6 @@ underscore-test-*
 *.o
 *.obj
 *.lst
+_-test-library
+_.a
+_.lib

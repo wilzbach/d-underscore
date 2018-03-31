@@ -1,6 +1,14 @@
-import std.stdio;
+import std.experimental.all;
 
-void main()
+auto removeIf(alias pred, AA)(AA aa)
 {
-	writeln("Edit source/app.d to start your project.");
+    aa.byPair.filter!(not!pred).each!(e => aa.remove(e.key));
+    return aa;
+}
+
+@safe unittest
+{
+    auto aa = ["a" : 1, "b" : 2];
+    aa.removeIf!(a => a.key == "a");
+    assert(aa == ["a":1]);
 }
